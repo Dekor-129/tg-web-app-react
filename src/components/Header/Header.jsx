@@ -12,7 +12,7 @@ export default function Header() {
     <div className='header'>
       <Button onClick={onClose}>Закрыть</Button>
       <span className={ 'username' }>
-        {tg.initDataUnsave?.user?.username}
+        {tg.initDataUnsave?.user?.username}  
       </span>
     </div>
   )
