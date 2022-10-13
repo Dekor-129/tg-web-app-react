@@ -2,10 +2,18 @@ import React from 'react'
 import Button from '../Button/Button'
 
 export default function Header() {
+  const tg = window.Telegram.WebApp
+
+  const onClose = () =>{
+    tg.close()
+  }
+
   return (
     <div className='header'>
-      <Button>Закрыть</Button>
-      <span className='username'></span>
+      <Button onClick={onClose}>Закрыть</Button>
+      <span className={ 'username' }>
+        {tg.initDataUnsave?.user?.username}
+      </span>
     </div>
   )
 }
